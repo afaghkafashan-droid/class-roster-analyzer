@@ -1,14 +1,4 @@
 
-
-:root {
-    --primary: #3155d9;
-    --primary-dark: #203fae;
-    --text: #1d2433;
-    --muted: #4f5b72;
-    --border: rgba(49, 85, 217, 0.16);
-    --shadow: 0 20px 45px rgba(49, 85, 217, 0.14);
-}
-
 * {
     box-sizing: border-box;
 }
