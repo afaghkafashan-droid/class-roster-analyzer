@@ -1,0 +1,199 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: "Tahoma", "Segoe UI", sans-serif;
+    background: linear-gradient(180deg, #fff5f8 0%, #ffe8ef 100%);
+    color: var(--text);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 22px 20px 10px;
+    font-weight: 700;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary), #7c9bff);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 10px 22px rgba(79, 106, 245, 0.3);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 16px 32px;
+}
+
+.form-card {
+    width: min(100%, 440px);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    padding: 30px 26px 24px;
+    position: relative;
+}
+
+.form-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+    pointer-events: none;
+}
+
+.motto {
+    margin: 0 0 8px;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(1.9rem, 3vw, 2.4rem);
+    line-height: 1.3;
+    color: var(--text);
+}
+
+.intro {
+    margin: 12px 0 26px;
+    color: var(--muted);
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 14px 14px;
+    border: 1px solid rgba(103, 114, 138, 0.2);
+    border-radius: 14px;
+    background: #f9faff;
+    color: var(--text);
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    outline: none;
+}
+
+input::placeholder {
+    color: #a3acc2;
+}
+
+input:focus {
+    border-color: rgba(79, 106, 245, 0.6);
+    box-shadow: 0 0 0 5px rgba(79, 106, 245, 0.08);
+    background: #fff;
+}
+
+.hint {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 8px;
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 18px;
+    background: linear-gradient(135deg, #3155d9, #203fae);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 12px 24px rgba(32, 63, 174, 0.35);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #2849c7, #193593);
+    box-shadow: 0 16px 28px rgba(32, 63, 174, 0.42);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    padding: 18px 16px;
+    background: #e1e8fb;
+    border-top: 1px solid #cbd6f2;
+    color: #35415a;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+@media (max-width: 480px) {
+    .form-card {
+        padding: 24px 18px 20px;
+        border-radius: 18px;
+    }
+
+    .eyebrow {
+        font-size: 0.7rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input {
+        padding: 12px 13px;
+    }
+
+    button {
+        padding: 14px 16px;
+    }
+}
